@@ -156,7 +156,7 @@ class ConfigWindow(QWidget):
 
         # Border Thickness parameter
         bt_layout = QHBoxLayout()
-        bt_label = QLabel("Border Dicke:")
+        bt_label = QLabel("Border thickness:")
         self.bt_spin = QSpinBox()
         self.bt_spin.setRange(0, 10)
         self.bt_spin.setValue(self.overlay.crosshair_border_width)
