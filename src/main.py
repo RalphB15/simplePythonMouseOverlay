@@ -84,7 +84,7 @@ class ConfigWindow(QWidget):
     def __init__(self, overlay: OverlayWindow):
         super().__init__()
         self.overlay = overlay
-        self.setWindowTitle("Crosshair konfigurieren")
+        self.setWindowTitle("Configure Crosshair")
         self.setGeometry(100, 100, 300, 300)
 
         layout = QVBoxLayout()
@@ -105,7 +105,7 @@ class ConfigWindow(QWidget):
 
         # Size parameter
         size_layout = QHBoxLayout()
-        size_label = QLabel("Größe:")
+        size_label = QLabel("Size:")
         self.size_spin = QSpinBox()
         self.size_spin.setRange(5, 100)
         self.size_spin.setValue(self.overlay.crosshair_size)
@@ -116,7 +116,7 @@ class ConfigWindow(QWidget):
 
         # Thickness parameter
         thickness_layout = QHBoxLayout()
-        thickness_label = QLabel("Dicke:")
+        thickness_label = QLabel("Thickness:")
         self.thickness_spin = QSpinBox()
         self.thickness_spin.setRange(1, 20)
         self.thickness_spin.setValue(self.overlay.crosshair_thickness)
@@ -127,7 +127,7 @@ class ConfigWindow(QWidget):
 
         # Gap parameter
         gap_layout = QHBoxLayout()
-        gap_label = QLabel("Lücke:")
+        gap_label = QLabel("Gap:")
         self.gap_spin = QSpinBox()
         self.gap_spin.setRange(0, 50)
         self.gap_spin.setValue(self.overlay.crosshair_gap)
@@ -138,7 +138,7 @@ class ConfigWindow(QWidget):
 
         # Fill Color parameter
         color_layout = QHBoxLayout()
-        color_label = QLabel("Farbe:")
+        color_label = QLabel("Fill color:")
         self.color_button = QPushButton("Select")
         self.color_button.clicked.connect(self.choose_color)
         color_layout.addWidget(color_label)
@@ -147,7 +147,7 @@ class ConfigWindow(QWidget):
 
         # Border Color parameter
         border_layout = QHBoxLayout()
-        border_label = QLabel("Border Farbe:")
+        border_label = QLabel("Border color:")
         self.border_button = QPushButton("Select")
         self.border_button.clicked.connect(self.choose_border_color)
         border_layout.addWidget(border_label)
